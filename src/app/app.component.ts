@@ -1,5 +1,7 @@
-import { Component, VERSION } from '@angular/core';
+import { Component } from '@angular/core';
+import { BitcoinService } from './bitcoin.service';
 import { GithubService } from './github.service';
+import { TimerService } from './timer.service';
 
 @Component({
   selector: 'my-app',
@@ -9,13 +11,23 @@ import { GithubService } from './github.service';
 export class AppComponent {
   name = 'HttpClient Demo';
 
-  constructor(public gitHubService: GithubService) {
+  constructor(
+    public gitHubService: GithubService,
+    public bitcoinService: BitcoinService,
+    public timer: TimerService
+  ) {
     //gitHubService => atributo
     // GithubService => classe importada
   }
 
   ngOnInit() {
-    this.gitHubService.update();
+    //this.gitHubService.update();
     // chama esse método assim q o componente do app carregar
+    this.bitcoinService.update();
+    this.timer.set();
+  }
+
+  updateBitcoinRates() {
+    this.bitcoinService.update();
   }
 }

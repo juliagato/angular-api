@@ -1,5 +1,25 @@
-<hello name="{{ name }}"></hello>
-<h2>Github Repositories</h2>
+<h1>Get These Coins!</h1>
+Nome: Julia Gato Heitor RA: 0050832011014
+<hr />
+
+<h2>
+  BitCoin$
+  <!--&nbsp;<button (click)="updateBitcoinRates()">Atualizar</button>-->
+</h2>
+<table border="1">
+  <tr>
+    <th>Data/hora</th>
+    <th>USD</th>
+    <th>BRL</th>
+  </tr>
+  <tr *ngFor="let rate of bitcoinService.list">
+    <td>{{ rate.time.updated }}</td>
+    <td>{{ rate.bpi.USD.rate_float }}</td>
+    <td>{{ rate.bpi.BRL.rate_float }}</td>
+  </tr>
+</table>
+<!--
+<h2>GitHub Repositories</h2>
 <table border="1">
   <tr>
     <th>ID</th>
@@ -12,12 +32,4 @@
     <td><a href="{{ repo.html_url }}">Link</a></td>
   </tr>
 </table>
-<hr />
-<h2>Bitcoin$ &nbsp;<button>Atualizar</button></h2>
-<table border="1">
-  <tr>
-    <th>Data/hora</th>
-    <th>USD</th>
-    <th>EURO</th>
-  </tr>
-</table>
+-->
