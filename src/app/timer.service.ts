@@ -10,6 +10,6 @@ export class TimerService {
   set() {
     this.timer = setInterval(() => {
       this.bitcoinService.update();
-    }, 60000);
+    }, 3000);
   }
 }

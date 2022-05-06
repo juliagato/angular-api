@@ -35,9 +35,15 @@ export class BitcoinService {
         this.current = data;
         let current_usd = this.current.bpi.USD.rate_float;
         let current_brl = this.current.bpi.BRL.rate_float;
-        let last_el = this.list[-1];
-        console.log(last_el);
-        if (this.list[-1] !== data) {
+        let last_el = this.list[this.list.length - 1];
+        if (last_el && this.list.length > 1) {
+          if (
+            last_el.bpi.USD.rate_float !== current_usd ||
+            last_el.bpi.BRL.rate_float !== current_brl
+          ) {
+            this.list.push(data);
+          }
+        } else {
           this.list.push(data);
         }
       });
