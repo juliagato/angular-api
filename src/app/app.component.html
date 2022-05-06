@@ -1,9 +1,15 @@
 <hello name="{{ name }}"></hello>
-<h2>Github repo</h2>
+<h2>Github Repositories</h2>
 <table border="1">
   <tr>
     <th>ID</th>
+    <th>Full Name</th>
     <th>Link</th>
+  </tr>
+  <tr *ngFor="let repo of gitHubService.repos">
+    <td>{{ repo.id }}</td>
+    <td>{{ repo.full_name }}</td>
+    <td><a href="{{ repo.html_url }}">Link</a></td>
   </tr>
 </table>
 <hr />
