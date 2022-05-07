@@ -21,12 +21,12 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    //this.gitHubService.update();
     // chama esse método assim q o componente do app carregar
+    this.bitcoinService.update();
     this.timer.set();
   }
 
-  updateBitcoinRates() {
+  /*updateBitcoinRates() {
     this.bitcoinService.update();
-  }
+  }*/
 }

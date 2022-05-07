@@ -1,1 +1,54 @@
 /* Add application styles & imports to this file! */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #101010;
+  color: white;
+  padding: 50px;
+}
+
+b {
+  color: gold;
+}
+
+th {
+  color: gold;
+  padding: 10px 6px;
+  text-align: center;
+  border: 1px solid white;
+}
+
+td {
+  padding: 10px;
+  color: white;
+  border: 1px solid white;
+  text-align: center;
+  background-color: #161616;
+}
+
+h1 {
+  color: white;
+}
+
+h2 {
+  color: gold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  margin-left: 15px;
+}
+
+table {
+  border-color: gold;
+}
+
+hr {
+  border-color: gold;
+  opacity: 0.5;
+}

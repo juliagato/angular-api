@@ -36,7 +36,7 @@ export class BitcoinService {
         let current_usd = this.current.bpi.USD.rate_float;
         let current_brl = this.current.bpi.BRL.rate_float;
         let last_el = this.list[this.list.length - 1];
-        if (last_el && this.list.length > 1) {
+        if (last_el && this.list.length > 0) {
           if (
             last_el.bpi.USD.rate_float !== current_usd ||
             last_el.bpi.BRL.rate_float !== current_brl
